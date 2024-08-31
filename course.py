@@ -14,42 +14,6 @@
 # suplies = ['ручки', 'степлеры', 'карандаши', 'скоросшиватель']
 # for i in range(len(suplies)):
     # print('Индекс', str(i), ':', suplies[i])
-    
-# myPets = ['Софи', 'Питер', 'Толстяк']
-# print('Укажите имя домашнего питомца:')
-# name = input()
-# if name not in myPets:
-    # else:
-    # print(name, '- мой питомец')
-    
-# suplies = ['ручки', 'степлеры', 'карандаши', 'скоросшиватель']
-# for index, item in  enumerate(suplies):
-   # print('Индекс', str(index), ':', item)
-   
-# import random
-# pets = ['Собака', 'Кот', 'Лось']
-# print(random.choice(pets))
-# people = ['Alice', 'Bob', 'Karol', 'David']
-# random.shuffle(people)
-# print(people)
-
-# spam = 'Hello, '
-# spam += 'world'
-# print(spam)
-# bacon = ['sofi']
-# bacon *= 3
-# print(* bacon)
-
-# spam = ['Здравствуй', 'Hello', 'Hey', 'Hey', 'jejey']
-# sp = [6, 58, 9, 0, 5.65436, 96348523, 65.663634]
-# sp.sort()
-# spam.sort(reverse=True)
-# print(spam)
-# print(sp)
-# spam = ['Кот', 'Боб', 'баРсуки', 'роппап', 'щщ']
-# spam.sort()
-# print(spam)
-
 # sp = ['А', 'я', 'Я', 'а']
 # sp.sort(key=str.lower)
 # print(sp)
@@ -69,39 +33,6 @@
   #  print(*spam)
 # spr = input().split()
 # sp(spr)
-
-# import random
-
-# result_lst = []
-
-# for experimental_number in range(10000):
-  #  number_of_streaks = 0
-  #  lst = []
-   # pause = 0
-    # for i in range(100):
-     #   num = random.randint(0, 1)
-    #    lst.append(num)
-
-   # for j in range(len(lst) - 6):
-   #  if pause == 0:
-           # if lst[j:j + 6] == [0, 0, 0, 0, 0, 0]:
-           #     number_of_streaks += 1
-            #    pause = 6
-           # elif lst[j:j + 6] == [1, 1, 1, 1, 1, 1]:
-             #   number_of_streaks += 1
-             #   pause = 6
-     #   else:
-       #     pause -= 1
-
- #   result = number_of_streaks / 100
-  #  result_lst.append(result)
-
-# probability = 0
-  
-# for e in result_lst:
-   # probability += e
-
-# print(f"Вероятность появления серии из шести повторяющихся элементов: {probability / 100}")
 
 # gird = [['.', '.', '.', '.', '.', '.'],
     #    ['.', 'O', 'O', '.', '.', '.'],
@@ -182,27 +113,6 @@
    #     break
    # print('Пароли могут состоять только из букв и цифр.')
    
-# l = ['abc', [(1, 2), ([3], 4)], 5]
-# print(l[1][1][0][0])
-# x = [1, 2, 3]
-# l = ['a', x, 'b']
-# d = {'x': x, 'y':2}
-# x[1] = 'suprise' # Изменяет все три ссылки!
-# print(d)
-# x = [1, 2, 3]
-# d = {'a':1, 'b':2}
-# a = x[:]
-# b = d.copy()
-# a[1] = 'Ni'
-# b['c'] = 'spam'
-# print(x, d, '\n', a, b)
-# x = [1, 2, 3]
-# l = ['a', x[:], 'b']
-# d = {'x':x[:], 'y':2, 'h':[323]}
-# import copy
-# k = copy.deepcopy(d)
-# print(k)
-
 # def print_Picnic(items_Dict, left_Width, right_Width):
   #  print('Берем на пикник'.center(left_Width + right_Width, '-'))
   #  for k, v in items_Dict.items():
@@ -224,16 +134,6 @@
 # import pyperclip
 # pyperclip.copy('Hello world!')
 # print(pyperclip.paste())
-
-# x = [1, 2, 3]
-# print(id(x))
-# print(id([1, 2, 3]))
-# x = [1, 2, 3]
-# y = x
-# print(y is x)
-# x.append(4)
-# print(x)
-# print(y)
 
 # myfile = open('myfile.txt', 'w')
 # myfile.write('hello text file\n')
@@ -260,3 +160,17 @@
     #return True
 # print('415-555-4242 - is this a phone number')
 # print(is_Phone_number('415-555-4242'))
+from zipfile import ZipFile
+import json
+with ZipFile('data.zip') as zip_file:
+    players = []
+    for file in zip_file.namelist():
+        if file.split('.')[-1] == 'json':
+            try:
+                with zip_file.open(file) as json_file:
+                    player = json.load( json_file)
+                    if player['team'] == 'Arsenal':
+                        players.append(f'{player['first_name']} {player['last_name']}')
+            except:
+                pass
+print(*sorted(players), sep='\n')
