@@ -1,16 +1,4 @@
-# catNames = []
-# while True:
-    # print('Укажите имя кота или кошки', str(len(catNames) + 1) + ' (<Enter> для завершения) : ')
-    # name = input()
-    # if name == '' or name == ' ':
-        # break
-     # elif name == 'Enter' or name == 'enter':
-     #   break
-   # catNames = catNames + [name]
-# print('Имена котов и кошек:')
-# for name in catNames:
-   # print('  ' + name)
-   
+
 # suplies = ['ручки', 'степлеры', 'карандаши', 'скоросшиватель']
 # for i in range(len(suplies)):
     # print('Индекс', str(i), ':', suplies[i])
@@ -33,50 +21,6 @@
   #  print(*spam)
 # spr = input().split()
 # sp(spr)
-
-# gird = [['.', '.', '.', '.', '.', '.'],
-    #    ['.', 'O', 'O', '.', '.', '.'],
-     #   ['O', 'O', 'O', 'O', '.', '.'],
-     #   ['O', 'O', 'O', 'O', 'O', '.'],
-     #   ['.', 'O', 'O', 'O', 'O', 'O'],
-     #   ['O', 'O', 'O', 'O', 'O', '.'],
-     #   ['.', '.', '.', '.', '.', '.'],
-     #   ['.', 'O', 'O', '.', '.', '.'],
-    #    ['O', 'O', 'O', 'O', '.', '.'],
-     #   ['.', '.', '.', '.', '.', '.'],]
-# for i in gird:
-   # for j in gird:
-    #    print(gird[0][0], gird[1][0], gird[2][0], gird[3][0], gird[4][0], gird[5][0], gird[6][0], gird[7][0], gird[8][0], end='')
-    #    print(gird[0][1], gird[1][1], gird[2][1], gird[3][1], gird[4][1], gird[5][1], gird[6][1], gird[7][1], gird[8][1], end='')
-   #     print(gird[0][2], gird[1][2], gird[2][2], gird[3][2], gird[4][2], gird[5][2], gird[6][2], gird[7][2], gird[8][2], end='')
-    #    print(gird[0][3], gird[1][3], gird[2][3], gird[3][3], gird[4][3], gird[5][3], gird[6][3], gird[7][3], gird[8][3], end='')
-   #     print(gird[0][4], gird[1][4], gird[2][4], gird[3][4], gird[4][4], gird[5][4], gird[6][4], gird[7][4], gird[8][4], end='')
-    #    print(gird[0][5], gird[1][5], gird[2][5], gird[3][5], gird[4][5], gird[5][5], gird[6][5], gird[7][5], gird[8][5], end='')
-    
-# игра крестики нолики из книги автоматизация рутинных задач с помощью python
- # the_Board = {'top-L': '', 'top-M': '', 'top-R': '',
-         #    'mid-L': '', 'mid-M': '', 'mid-R': '',
-         #    'low-L': '', 'low-M': '', 'low-R': ''}
-#def printBoard(board):
-   # print(board['top-L'] + '|' + board['top-M'] + '|' + \
-  #        board['top-R'])
-  #  print('-+-+-')
-  #  print(board['mid-L'] + '|' + board['mid-M'] + '|' + \
-  #        board['mid-R'])
- #   print('-+-+-')
-   # print(board['low-L'] + '|' + board['low-M'] + '|' + \
-   #       board['low-R'])
-# turn = 'X'
-# for i in range(9):
-  #  printBoard(the_Board)
-  #  print('Ход для', turn, 'куда ходить')
-  #  move = input()
-   # the_Board[move] = turn
-   # if turn == 'X':
-    #    turn = 'O'
-   # else:
-    #    tunr = 'X'
- # printBoard(the_Board)
 
 # stuff = {'веревка': 1, 'факел': 6, 'золотая монета': 42, 'кинжал': 1, 'стрела': 12}
 
@@ -122,14 +66,6 @@
 # print_Picnic(picnic_Items, 16, 5)
 # print_Picnic(picnic_Items, 24, 7)
 
-# print(ord('A'))  - 65
-# print(ord('4')) - 52
-# print(ord('!')) - 33
-# print(chr(65)) - 'A'
-# print(ord('A') < ord('B')) - True
-# print(chr(ord('s'))) - s
-# print(chr(ord('a') + 1)) - b
-
 # модуль pyperclip
 # import pyperclip
 # pyperclip.copy('Hello world!')
@@ -144,33 +80,69 @@
 # myfile = open('myfile.txt')
 # print(myfile.read())
 # print(open('myfile.txt').read())
-
-# isPhoneNumber
-# def is_Phone_number(text):
-   # if len(text) != 12:
-    #    return False
-   # for i in range(0, 3):
-   #     if not text[i].isdecimal():
-   #         return False
-    #if text[7] != '-':
-    #    return False
-   # for i in range(8, 12):
-   #     if not text[i].isdecimal():
-    #        return False
-    #return True
 # print('415-555-4242 - is this a phone number')
 # print(is_Phone_number('415-555-4242'))
-from zipfile import ZipFile
-import json
-with ZipFile('data.zip') as zip_file:
-    players = []
-    for file in zip_file.namelist():
-        if file.split('.')[-1] == 'json':
-            try:
-                with zip_file.open(file) as json_file:
-                    player = json.load( json_file)
-                    if player['team'] == 'Arsenal':
-                        players.append(f'{player['first_name']} {player['last_name']}')
-            except:
-                pass
-print(*sorted(players), sep='\n')
+# d = {'a': 1, 'b': 2}
+# import pickle
+# with open('datafile.pkl', 'wb') as f:
+  # pickle.dump(d, f)
+ #  f.close()
+# with open('datafile.pkl', 'rb') as file:
+ #  e = pickle.load(file)
+  # print(e)
+# f = open('datafile.pkl', 'rb').read()
+# print(f) - выводит байты
+# name = dict(first='Bob', last='Smith')
+# rec = dict(name=name, job=['dev', 'mgr'], age=40.5)
+# import json
+# s = json.dumps(rec)
+# o = json.loads(s)
+# print(o == rec) - True
+# heroRegex = re.compile(r'Бэтмен|Тина фей')
+# mo1 = heroRegex.search('Бэтмен и Тина фей.')
+# print(mo1.group())
+# mo2 = heroRegex.search('Тина фей and Бэтмен.')
+# print(mo2.group())
+# batRegex = re.compile(r'Bat(man|car|copter|bat)')
+# mo = batRegex.search('Batcar lost wheel')
+# print(mo.group(1))
+# print(os.name)
+# print(os.environ) - environ({'ALLUSERSPROFILE': 'C:\\ProgramData'  сведения, которые касаются конфигурации компьютера, можно при помощи
+# print(os.getenv('TMP')) При помощи функции getenv можно получить доступ к различным переменным среды.
+# print(os.path.isfile("D:/Fortnite")) - False
+# print(os.getcwd())
+# print(os.path.isdir('D:/Fortnite')) - True
+# batRegex = re.compile(r'Bat(wo)?man')
+# mo1 = batRegex.search('My hero - batman')
+# mo2 = batRegex.search('My hero - Batwoman')
+# print(mo2.group())
+# phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
+# mo1 = phoneRegex.search('my number: 415-555-4242')
+# print(mo1.group())
+# mo2 = phoneRegex.search('My number: 555-4242')
+# print(mo2.group()) - 555-4242
+# os.mkdir(r"D:\folder") - Например, с помощью метода mkdir довольно легко создать папку, просто указав для нее желаемый путь.
+# os.makedirs(r"D:\folder\first\second\third") - Благодаря функции makedirs можно создавать сразу несколько новых папок в неограниченном количестве, если предыдущая директория является родительской для следующей
+# os.remove(r"D:\text.txt") - Избавиться от ненужного в дальнейшей работе файла можно с помощью метода remove
+# os.rmdir(r"D:\folder") -  стереть из памяти папку, следует воспользоваться встроенной функцией rmdir
+# os.removedirs(r"D:\folder\first\second\third") Для быстрого удаления множества пустых папок следует вызывать функцию removedirs
+# os.startfile(r"D:\test.txt") Встроенные функции библиотеки os позволяют запускать отдельные файлы и папки прямиком из программы
+# print(os.path.basename("D:/test.txt")) Преобразовать адрес объекта в название позволяет функция basename, которая содержится в подмодуле path из библиотеки os
+# print(os.path.dirname("D:/folder/test.txt")) Обратная ситуация возникает тогда, когда пользователю нужно получить только путь к файлу, без самого названия объекта.
+# import re
+# batRegex = re.compile(r'Bat(wo)*man')
+# mo1 = batRegex.search('My hero - batman')
+# mo3 = batRegex.search('My hero - Batwowowowowowowowman')
+# print(mo3.group()) - Batwowowowowowowowman
+# batRegex = re.compile(r'Bat(wo)+man')
+# mo1 = batRegex.search('My hero - batwoman')
+# mo2 = batRegex.search('My hero - Batwowowowowowowowman')
+# mo2.group() - Batwowowowowowowowman
+# mo3 = batRegex.search('My hero - batman')
+# print(mo3 == None) - True
+s = 'Человек, план, канал: Панама'
+newStr = ""  
+for char in s:
+  if char.isalnum():
+    newStr += char.lower()
+print(newStr)
